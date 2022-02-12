@@ -1,5 +1,5 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: linear-gradient(90deg, rgb(22, 45, 93) 0%, rgb(22, 45, 93) 100%);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
     list-style: none;
     text-align: center;
     width: 70vw;
-    justify-content: end;
+    justify-content: center;
     margin-right: 2rem;
   }
   
@@ -58,13 +58,13 @@
   }
   
   .nav-links-warranties:hover {
-    background-color: #990000;
+    background-color: #624a86;
     border-radius: 2px;
     transition: all 0.2s ease-out;
   }
   
   .nav-links:hover {
-    background-color: #990000;
+    background-color: #624a86;
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
@@ -118,7 +118,7 @@
     }
   
     .nav-links:hover {
-      background-color: #990000;
+      background-color: #624a86;
       border-radius: 0;
     }
   
@@ -160,7 +160,7 @@
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;
-      background: #990000;
+      background: #624a86;
       text-decoration: none;
       color: #fff;
       font-size: 1.5rem;
@@ -168,7 +168,7 @@
   
     .nav-links-mobile:hover {
       background: #fff;
-      color: #990000;
+      color: #624a86;
       transition: 250ms;
     }
   

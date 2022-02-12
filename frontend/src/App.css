@@ -1,38 +1,248 @@
-.App {
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+html {
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background: linear-gradient(90deg, rgb(192, 192, 192) 0%, rgb(211, 211, 211) 100%);
+}
+
+/* Login Form */
+
+.form-container {
+  margin: 50px auto;
+  width: 500px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 300px;
+  display: grid;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.form-success {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.form-content-right {
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  background: linear-gradient(90deg, rgb(100, 0, 0) 0%, rgb(17, 17, 17) 100%);
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form h1 {
+  font-size: 1rem;
+  text-align: start;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  width: 50%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(153, 0, 0) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  transition: all 0.4s ease-out;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #fff;
+  width: 80%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-input-login a {
+  text-decoration: none;
+  color: #990000;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.log-out-btn {
+  width: 25%;
+  height: 50px;
+  /* margin-top: 10px; */
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(153, 0, 0) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+/* Services Cards */
+
+
+.services-card {
+  margin: 50px auto;
+  width: 900px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  background-color:#fff;
+  color: white
+}
+
+.services-container {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: space-evenly;
+  gap: 10px;
+  
+}
+
+.service-info {
+  display: inline-grid;
+  grid-template-columns: repeat(1, 2fr);
+  justify-content: space-evenly;
+  gap: 10px;
+  
+}
+
+
+
+/* warranty */
+
+
+.services-card-warranty {
+  margin: 50px auto;
+  width: 900px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  background-color:#fff;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Home */
+
+.services-card-Home {
+  margin: 50px auto;
+  width: 700px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border-radius: 10px;
+  height: 400px;
+  display: grid;
+  background-color:#fff;
+  text-align: center;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
