@@ -51,9 +51,11 @@ function NavBar () {
         </li>
 
         <li className='nav-item'>
-            <Link to="/Shop" className='nav-links' onClick={closeMobileMenu}>
+            <Link  to="https://konnectkraze.com/products/past-boxes" className='nav-links' onClick={closeMobileMenu}>
                 Shop
             </Link>
+               
+            
         </li>
 
     </ul>
