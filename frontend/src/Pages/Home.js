@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+
+const searchBusiness = (event) => {
+    fetch(`/Business/${Business.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+   
+    }
+    
+}
+
+
 
 function Home() {
     return (
-        <div> <p>AuTKonnect konnects you to trusted service providers, specialists
+        <div> 
+      <input 
+          value={Business}
+          onChange={event => setBusiness(event.target.value)}
+          onKeyPress={searchBusiness}
+          placeholder='Search Businesses'
+          type='text' />
+            
+            <p className="home">AuTKonnect konnects you to trusted service providers, specialists
         and businesses serving the autism & special needs community </p>
         <p>
         We provide resources, education and community.
