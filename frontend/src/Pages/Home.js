@@ -1,30 +1,11 @@
 import React, { useEffect } from 'react';
-
-
-const searchBusiness = (event) => {
-    fetch(`/Business/${Business.id}`, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-   
-    }
-    
-}
-
+import SearchBar from '../SearchBar/SearchBar';
 
 
 function Home() {
     return (
         <div> 
-      <input 
-          value={Business}
-          onChange={event => setBusiness(event.target.value)}
-          onKeyPress={searchBusiness}
-          placeholder='Search Businesses'
-          type='text' />
-            
+            <SearchBar placeholder="Search for Businesses..." data={}/>
             <p className="home">AuTKonnect konnects you to trusted service providers, specialists
         and businesses serving the autism & special needs community </p>
         <p>
