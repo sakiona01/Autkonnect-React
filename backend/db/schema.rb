@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_06_222620) do
+ActiveRecord::Schema.define(version: 2022_02_28_234925) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
@@ -18,19 +18,9 @@ ActiveRecord::Schema.define(version: 2022_02_06_222620) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "businesses_controllers", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "recipient_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "conversations_controllers", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,11 +34,6 @@ ActiveRecord::Schema.define(version: 2022_02_06_222620) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["business_id"], name: "index_events_on_business_id"
     t.index ["user_id"], name: "index_events_on_user_id"
-  end
-
-  create_table "events_controllers", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", force: :cascade do |t|
