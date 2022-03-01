@@ -22,10 +22,22 @@ class BusinessesController < ApplicationController
         render :new
     end
 
+    def update
+        if @business.update(business_params)
+         render json: @business
+        else
+            render json: {error: "Business not found"}, statsus :not_found 
+        end
+    end
+
+    def destroy
+
+    end
+
 private 
 
     def business_params
-        params.require(:business).permit(:name, :id)
+        params.permit(:name, :address, :owner, :phone, :email, :website, :type_of_service)
     end
 end
 
