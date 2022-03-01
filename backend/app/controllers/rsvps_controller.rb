@@ -1,5 +1,5 @@
 class RsvpsController < ApplicationController
-    before_action :redirect_if_not_logged_in
+    #before_action :redirect_if_not_logged_in
     
     def new
         if @event = Event.find_by_id(params[:event_id])
@@ -12,7 +12,7 @@ class RsvpsController < ApplicationController
     def create
         @rsvp = current_user.rsvps.build(rsvp_params)
         if @rsvp.save
-        redirect_to rsvp_path(@rsvp)
+        #redirect_to rsvp_path(@rsvp)
         else
           render :new
         end

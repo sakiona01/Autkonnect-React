@@ -1,5 +1,5 @@
 class BusinessesController < ApplicationController
-    before_action :redirect_if_not_logged_in 
+    #before_action :redirect_if_not_logged_in 
 
     def index
         if params[:q]
@@ -12,6 +12,14 @@ class BusinessesController < ApplicationController
 
     def show
         @business = Business.find_by_id(params[:id])
+    end
+
+    def create
+        @business = Business.new(business_params)
+        if @business.save
+        session[:business_id] = @business.id
+        else
+        render :new
     end
 
 private 

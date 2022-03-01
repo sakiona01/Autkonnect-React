@@ -1,6 +1,13 @@
-class ApplicationController < ActionController::Base
-
+class ApplicationController < ActionController::API
+    include ActionController::Cookies
     helper_method :current_user, :logged_in?
+
+    
+
+    def hello_world
+        session[:count] = (session[:count] || 0) + 1
+        render json: { count: session[:count] }
+    end
 
     private
 
@@ -13,8 +20,8 @@ class ApplicationController < ActionController::Base
     end
 
 
-    def redirect_if_not_logged_in
-        redirect_to login_path if !logged_in?
-    end
+   # def redirect_if_not_logged_in
+        #redirect_to login_path if !logged_in?
+    #end
 
 end

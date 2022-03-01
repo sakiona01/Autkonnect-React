@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
     before_action :set_event, only:[:show, :edit, :update]
-    before_action :redirect_if_not_logged_in
+    #before_action :redirect_if_not_logged_in
     
     def new
        @event = Event.new
@@ -11,7 +11,7 @@ class EventsController < ApplicationController
         @event = Event.new(event_params)
         @event.user_id = session[:user_id]
          if @event.save
-        redirect_to events_path
+        #redirect_to events_path
         else
         @event.build_business 
         render :new
@@ -24,6 +24,7 @@ class EventsController < ApplicationController
     else
     @events = Event.all
    end
+   render json: @events
 end
 
    def show
@@ -35,7 +36,7 @@ end
 
    def update
     if @event.update(event_params)
-      redirect_to event_path(@event)
+      #redirect_to event_path(@event)
     else
         render :edit
     end 

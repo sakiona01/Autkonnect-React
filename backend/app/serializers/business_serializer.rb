@@ -1,9 +1,8 @@
 class BusinessSerializer < ActiveModel::Serializer
 
-  attributes :id, :name
+  attributes :id, :name, :address, :owner, :phone, :email, :website, :type_of_service
 
-  belongs_to :user
   has_many :events
-  has_many :reviews
+ 
 
 end

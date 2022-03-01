@@ -1,5 +1,5 @@
 class ConversationsController < ApplicationController
-    before_action :redirect_if_not_logged_in
+    #before_action :redirect_if_not_logged_in
       
       def index
        @users = User.all
@@ -12,7 +12,7 @@ class ConversationsController < ApplicationController
         else
           @conversation = Conversation.create!(conversation_params)
         end
-        redirect_to conversation_messages_path(@conversation)
+        #redirect_to conversation_messages_path(@conversation)
       end
   
       private

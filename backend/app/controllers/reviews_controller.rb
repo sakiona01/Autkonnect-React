@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :redirect_if_not_logged_in
+    #before_action :redirect_if_not_logged_in
     
     def new
         if @event = Event.find_by_id(params[:event_id])
@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     def create
         @review = current_user.reviews.build(review_params)
         if @review.save
-        redirect_to review_path(@review)
+        #redirect_to review_path(@review)
         else
           render :new
         end
