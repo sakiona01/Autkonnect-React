@@ -7,6 +7,7 @@ class BusinessesController < ApplicationController
         else
         @businesses = Business.all
        end
+       render json: @businesses
     end
 
     def show
