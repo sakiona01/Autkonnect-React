@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_234925) do
+ActiveRecord::Schema.define(version: 2022_03_01_001151) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
+    t.string "owner"
+    t.string "phone"
+    t.string "email"
+    t.string "website"
+    t.string "type_of_service"
   end
 
   create_table "conversations", force: :cascade do |t|
@@ -74,6 +80,14 @@ ActiveRecord::Schema.define(version: 2022_02_28_234925) do
     t.string "uid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "parent_name"
+    t.string "child_name"
+    t.integer "age"
+    t.string "city"
+    t.integer "zipcode"
+    t.integer "distance"
+    t.string "type_of_service"
+    t.string "image"
   end
 
   add_foreign_key "events", "businesses"
