@@ -1,6 +1,6 @@
 katie = User.create(username: "katie", password: "katiecat", email: "katie@cat.com")
 
-shop = Business.create(name: "Coffee Shop")
+shop = Business.create(name: "Coffee Shop", username: "Valer Coffee", password: "Valer")
 
 coffee = Event.create(name: "Coffee Social", description: "Event at the coffee shop in London, UK.", business_id: shop.id, user_id: katie.id)
 

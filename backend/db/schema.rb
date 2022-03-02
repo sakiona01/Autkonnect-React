@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_001151) do
+ActiveRecord::Schema.define(version: 2022_03_02_192600) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2022_03_01_001151) do
     t.string "email"
     t.string "website"
     t.string "type_of_service"
+    t.string "username"
+    t.string "password_digest"
   end
 
   create_table "conversations", force: :cascade do |t|
