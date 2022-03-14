@@ -1,0 +1,29 @@
+.Home-Heading{
+   color: #624A86;
+    font-size: 70px;
+    text-align: center;
+    position: relative;
+    right: 200px;
+    padding-top: 5%;
+}
+
+.Home-List{
+    text-align: center;
+}
+
+.Did-You-Know{
+    position: relative;
+    left: 200px;
+   
+}
+
+.search-bar{
+  padding: 5%;
+  
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }

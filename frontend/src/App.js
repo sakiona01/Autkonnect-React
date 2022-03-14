@@ -12,14 +12,14 @@ import Login from './Pages/Login.js';
 function App() {
   const [currentUser, setCurrentUser] = useState({})
 
-  useEffect(() => {
-    fetch('/me')
-    .then(res => {
-      if(res.ok) {
-        res.json().then(user => setCurrentUser(user))
-      }
-    })
-  }, [])
+  // useEffect(() => {
+  //   fetch('/me')
+  //   .then(res => {
+  //     if(res.ok) {
+  //       res.json().then(user => setCurrentUser(user))
+  //     }
+  //   })
+  // }, [])
 
   
   return (
